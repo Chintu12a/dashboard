@@ -1,5 +1,5 @@
 import React from 'react';
-import { KanbanComponent, ColumnsDirective, ColumnDirectiv, Drag } from "@syncfusion/ej2-react-kanban";
+import { KanbanComponent, ColumnsDirective, ColumnDirective, Drag } from "@syncfusion/ej2-react-kanban";
 import Header from "../components/Header";
 import { kanbanData, kanbanGrid } from '../data/dummy';
 
@@ -12,8 +12,8 @@ const Kanban = () => {
       dataSource={kanbanData}
       keyField="Status">
         <ColumnsDirective>
-          {kanbanGrid.map((id,item) => 
-          <ColumnsDirective key={id} {...item}/>
+          {kanbanGrid.map((item,id) => 
+          <ColumnDirective key={id} {...item}/>
           )}
         </ColumnsDirective>
       </KanbanComponent>
